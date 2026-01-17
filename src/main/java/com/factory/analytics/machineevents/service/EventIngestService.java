@@ -67,6 +67,8 @@ public class EventIngestService {
                 event.setDurationMs(req.getDurationMs());
                 event.setDefectCount(req.getDefectCount());
                 event.setPayloadHash(payloadHash);
+                event.setFactoryId(req.getFactoryId());
+                event.setLineId(req.getLineId());
 
                 repository.save(event);
                 accepted++;
@@ -89,6 +91,8 @@ public class EventIngestService {
                         existing.setDefectCount(req.getDefectCount());
                         existing.setReceivedTime(receivedTime);
                         existing.setPayloadHash(payloadHash);
+                        existing.setLineId(req.getLineId());
+                        existing.setFactoryId(req.getFactoryId());
 
                         repository.save(existing);
                         updated++;

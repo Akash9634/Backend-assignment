@@ -39,6 +39,12 @@ public class MachineEvent {
     @Column(name = "payload_hash", nullable = false)
     private String payloadHash;
 
+    @Column(name = "factory_id")
+    private String factoryId;
+
+    @Column(name = "line_id")
+    private String lineId;
+
     public MachineEvent(){}
 
     public Long getId() {
@@ -99,6 +105,22 @@ public class MachineEvent {
 
     public String getPayloadHash() {
         return payloadHash;
+    }
+
+    public String getFactoryId() {
+        return factoryId;
+    }
+
+    public void setFactoryId(String factoryId) {
+        this.factoryId = factoryId;
+    }
+
+    public String getLineId() {
+        return lineId;
+    }
+
+    public void setLineId(String lineId) {
+        this.lineId = lineId;
     }
 
     public void setPayloadHash(String payloadHash) {

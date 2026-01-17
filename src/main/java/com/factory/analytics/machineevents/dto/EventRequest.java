@@ -15,8 +15,12 @@ public class EventRequest {
 
     @NotBlank
     private String machineId;
+
     private long durationMs;
     private int defectCount;
+
+    private String factoryId;
+    private String lineId;
 
     //no-args constructor
     public EventRequest() {}
@@ -55,6 +59,22 @@ public class EventRequest {
 
     public int getDefectCount() {
         return defectCount;
+    }
+
+    public String getFactoryId() {
+        return factoryId;
+    }
+
+    public void setFactoryId(String factoryId) {
+        this.factoryId = factoryId;
+    }
+
+    public String getLineId() {
+        return lineId;
+    }
+
+    public void setLineId(String lineId) {
+        this.lineId = lineId;
     }
 
     public void setDefectCount(int defectCount) {
