@@ -1,5 +1,107 @@
 package com.factory.analytics.machineevents.model;
 
+
+import jakarta.persistence.*;
+
+import java.time.Instant;
+
+@Entity
+@Table(
+        name = "machine_event",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "event_id")
+        }
+)
 public class MachineEvent {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "event_id", nullable = false)
+    private String eventId;
+
+    @Column(name = "machine_id", nullable = false)
+    private String machineId;
+
+    @Column(name = "event_time", nullable = false)
+    private Instant eventTime;
+
+    @Column(name = "received_time", nullable = false)
+    private Instant receivedTime;
+
+    @Column(name = "duration_ms", nullable = false)
+    private long durationMs;
+
+    @Column(name = "defect_count", nullable = false)
+    private int defectCount;
+
+    @Column(name = "payload_hash", nullable = false)
+    private String payloadHash;
+
+    public MachineEvent(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
+    }
+
+    public String getMachineId() {
+        return machineId;
+    }
+
+    public void setMachineId(String machineId) {
+        this.machineId = machineId;
+    }
+
+    public Instant getEventTime() {
+        return eventTime;
+    }
+
+    public void setEventTime(Instant eventTime) {
+        this.eventTime = eventTime;
+    }
+
+    public Instant getReceivedTime() {
+        return receivedTime;
+    }
+
+    public void setReceivedTime(Instant receivedTime) {
+        this.receivedTime = receivedTime;
+    }
+
+    public long getDurationMs() {
+        return durationMs;
+    }
+
+    public void setDurationMs(long durationMs) {
+        this.durationMs = durationMs;
+    }
+
+    public int getDefectCount() {
+        return defectCount;
+    }
+
+    public void setDefectCount(int defectCount) {
+        this.defectCount = defectCount;
+    }
+
+    public String getPayloadHash() {
+        return payloadHash;
+    }
+
+    public void setPayloadHash(String payloadHash) {
+        this.payloadHash = payloadHash;
+    }
 }
