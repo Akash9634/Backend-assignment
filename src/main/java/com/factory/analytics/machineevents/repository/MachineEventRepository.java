@@ -18,4 +18,12 @@ public interface MachineEventRepository extends JpaRepository<MachineEvent, Long
             Instant end
     );
 
+    List<MachineEvent>
+    findByFactoryIdAndEventTimeGreaterThanEqualAndEventTimeLessThan(
+            String factoryId,
+            Instant from,
+            Instant to
+    );
+
+
 }
