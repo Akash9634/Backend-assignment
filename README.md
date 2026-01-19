@@ -112,8 +112,7 @@ With additional time, the following could be improved:
 - Replace H2 with PostgreSQL.
 - Add database-level aggregation queries for large datasets.
 - Introduce pagination for analytics endpoints.
-- Add metrics and monitoring (Micrometer).
-- Implement retry-safe upsert logic using native SQL.
+- Add metrics and monitoring.
 
 ---
 

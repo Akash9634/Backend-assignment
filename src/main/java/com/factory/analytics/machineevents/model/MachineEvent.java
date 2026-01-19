@@ -18,7 +18,7 @@ public class MachineEvent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, name = "event_id", nullable = false)
+    @Column(name = "event_id", nullable = false)
     private String eventId;
 
     @Column(name = "machine_id", nullable = false)

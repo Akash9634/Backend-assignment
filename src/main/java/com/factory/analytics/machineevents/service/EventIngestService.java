@@ -7,10 +7,8 @@ import com.factory.analytics.machineevents.dto.RejectionReason;
 import com.factory.analytics.machineevents.model.MachineEvent;
 import com.factory.analytics.machineevents.repository.MachineEventRepository;
 import com.factory.analytics.machineevents.util.PayloadHashUtil;
-import jdk.jfr.Event;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;

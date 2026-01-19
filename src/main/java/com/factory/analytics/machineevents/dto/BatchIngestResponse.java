@@ -8,6 +8,7 @@ public class BatchIngestResponse {
     private int deduped;
     private int updated;
     private int rejected;
+    private List<RejectionReason> rejections;
 
     public int getAccepted() {
         return accepted;
@@ -48,7 +49,5 @@ public class BatchIngestResponse {
     public void setRejections(List<RejectionReason> rejections) {
         this.rejections = rejections;
     }
-
-    private List<RejectionReason> rejections;
 
 }
